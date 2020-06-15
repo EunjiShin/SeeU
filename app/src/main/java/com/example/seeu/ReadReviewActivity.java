@@ -121,6 +121,7 @@ public class ReadReviewActivity extends AppCompatActivity {
                                 rating = document.getDouble("rating");
                                 StorageReference storageRef = firebaseStorage.getReferenceFromUrl("gs://seeu-70a59.appspot.com").child("images/"+filename);
                                 //이미지 안됨ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ////////
+                                /*
                                 storageRef.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Uri> task) {
@@ -133,6 +134,8 @@ public class ReadReviewActivity extends AppCompatActivity {
                                         }
                                     }
                                 });
+
+                                 */
 
                                 arrayAdapter.addItem(Name, Num, userid, nickname, filename, review, (float) rating);
                                 Postlist.invalidateViews();
